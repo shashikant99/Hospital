@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Award, Users, Heart, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
+import clinicEntrance from '@/assets/clinic-entrance.jpg';
 
 const AboutPage = () => {
   const stats = [
@@ -89,8 +90,8 @@ const AboutPage = () => {
               >
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1633893669122-a34e430e193b"
-                    alt="Pandit Ganesh Narayan Homeopathic Clinic interior"
+                    src={clinicEntrance}
+                    alt="Pandit Ganesh Narayan Homeopathic Clinic entrance"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -119,7 +120,7 @@ const AboutPage = () => {
               </motion.div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border-t border-border/50 pt-16">
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}

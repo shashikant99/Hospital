@@ -6,6 +6,7 @@ import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import ContactForm from '@/components/ContactForm.jsx';
 import ClinicInfo from '@/components/ClinicInfo.jsx';
+import clinicEntrance from '@/assets/clinic-entrance.jpg';
 
 const ContactPage = () => {
   return (
@@ -109,23 +110,35 @@ const ContactPage = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-5xl mx-auto"
             >
-              <div className="aspect-video rounded-2xl overflow-hidden shadow-xl bg-muted flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-card rounded-3xl overflow-hidden shadow-xl border border-border/50">
+                <div className="h-[300px] md:h-auto relative">
+                  <img
+                    src={clinicEntrance}
+                    alt="Pandit Ganesh Narayan Homeopathic Clinic Entrance"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 md:hidden">
+                    <span className="text-white font-semibold text-lg">Our Clinic Entrance & Signage</span>
+                  </div>
+                </div>
+                <div className="p-8 flex flex-col justify-center">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-2">
-                    Pandit Ganesh Narayan Homeopathic Clinic
+                  <h3 className="text-2xl font-bold text-foreground mb-3">
+                    Visit Our Clinic
                   </h3>
-                  <p className="text-muted-foreground">
-                    Surajgarh, Rajasthan
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    We are located at Kirna Villas in Surajgarh. You will find our signature circular orange and green PGN sign right outside the entrance on the brick facade.
                   </p>
-                  <p className="text-sm text-muted-foreground mt-4">
-                    Interactive map integration available
-                  </p>
+                  <div className="space-y-2 text-sm text-muted-foreground">
+                    <p className="font-semibold text-foreground">Address:</p>
+                    <p>Kirna Villas, P.No. 4, Ward No. 16,</p>
+                    <p>Surajgarh, Rajasthan - 333029</p>
+                  </div>
                 </div>
               </div>
             </motion.div>
