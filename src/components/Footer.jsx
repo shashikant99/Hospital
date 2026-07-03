@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Leaf, MapPin, Phone, Mail } from 'lucide-react';
+import { Leaf, MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
+import Logo from './Logo.jsx';
 
 const Footer = () => {
   return (
@@ -8,13 +9,11 @@ const Footer = () => {
       <div className="container-custom py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-primary-foreground" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Logo className="w-10 h-10 flex-shrink-0" />
               <div>
-                <span className="text-base font-semibold block" style={{ letterSpacing: '-0.01em' }}>
-                  PSGN Clinic
+                <span className="text-base font-semibold block leading-tight" style={{ letterSpacing: '-0.01em' }}>
+                  PGN Clinic
                 </span>
                 <p className="text-xs text-secondary-foreground/70">Homeopathic Care</p>
               </div>
@@ -48,7 +47,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-secondary-foreground/80 leading-relaxed">
-                  Surajgarh, Rajasthan
+                  Kirna Villas, P.No. 4, Ward No. 16, Surajgarh, Rajasthan
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -60,6 +59,28 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
                 <p className="text-sm text-secondary-foreground/80">clinic@ganeshnarayan.com</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Facebook className="w-4 h-4 text-primary flex-shrink-0" />
+                <a 
+                  href="https://www.facebook.com/p/Pandit-ganesh-naryan-homeopathic-clinnic-surajgarh-100075950684653/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors duration-200"
+                >
+                  Facebook Page
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Instagram className="w-4 h-4 text-primary flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/p.g.naryanhomeopathic?igsh=d3lxbTVuaHZwbzdm" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors duration-200"
+                >
+                  Instagram Profile
+                </a>
               </div>
             </div>
           </div>
@@ -90,7 +111,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-xs text-secondary-foreground/60 mt-4 text-center sm:text-left">
-            Dr. Manish Sharma - Licensed Homeopathic Practitioner
+            Dr. Manish Sharma — Licensed Homeopathic Practitioner
           </p>
         </div>
       </div>

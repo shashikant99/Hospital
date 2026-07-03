@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 
 const ClinicInfo = () => {
   return (
@@ -17,6 +17,7 @@ const ClinicInfo = () => {
               <p className="font-medium text-foreground mb-1">Location</p>
               <p className="text-muted-foreground leading-relaxed">
                 Pandit Ganesh Narayan Homeopathic Clinic<br />
+                Kirna Villas, P.No. 4, Ward No. 16,<br />
                 Surajgarh, Rajasthan
               </p>
             </div>
@@ -28,7 +29,7 @@ const ClinicInfo = () => {
             </div>
             <div>
               <p className="font-medium text-foreground mb-1">Phone</p>
-              <p className="text-muted-foreground">+91 98765 43210</p>
+              <p className="text-muted-foreground">+91 9024547154</p>
             </div>
           </div>
 
@@ -52,6 +53,40 @@ const ClinicInfo = () => {
                 Monday - Saturday: 9:00 AM - 7:00 PM<br />
                 Sunday: 10:00 AM - 2:00 PM
               </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Facebook className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-medium text-foreground mb-1">Facebook</p>
+              <a 
+                href="https://www.facebook.com/p/Pandit-ganesh-naryan-homeopathic-clinnic-surajgarh-100075950684653/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Follow us on Facebook
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+              <Instagram className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <p className="font-medium text-foreground mb-1">Instagram</p>
+              <a 
+                href="https://www.instagram.com/p.g.naryanhomeopathic?igsh=d3lxbTVuaHZwbzdm" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                Follow us on Instagram
+              </a>
             </div>
           </div>
         </div>
