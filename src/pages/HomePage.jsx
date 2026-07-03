@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, Leaf, Heart, Shield } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
+import homeWebp from '@/assets/home.webp';
 
 const HomePage = () => {
   const benefits = [
@@ -24,45 +25,96 @@ const HomePage = () => {
       <div className="min-h-screen flex flex-col">
         <Header />
 
-        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden py-24">
           <div 
             className="absolute inset-0 z-0"
             style={{
-              backgroundImage: 'url(https://horizons-cdn.hostinger.com/c7441319-2996-4411-8add-37c7ea94b73a/6bfed6e1ec18a2f0f2e2f2264b24db1d.webp)',
+              backgroundImage: `url(${homeWebp})`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center 40%',
               backgroundRepeat: 'no-repeat'
             }}
           >
             <div className="absolute inset-0 hero-overlay"></div>
           </div>
 
-          <div className="container-custom relative z-10 py-20">
+          <div className="container-custom relative z-10 py-8">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7 }}
-              className="max-w-3xl"
+              initial="hidden"
+              animate="show"
+              variants={{
+                hidden: { opacity: 0, y: 40 },
+                show: {
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    type: 'spring',
+                    stiffness: 60,
+                    delay: 0.1,
+                    staggerChildren: 0.12
+                  }
+                }
+              }}
+              className="max-w-3xl bg-black/45 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ letterSpacing: '-0.02em' }}>
-                Pandit Ganesh Narayan Homeopathic Clinic Surajgarh
-              </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-2xl">
-                Experience natural healing through time-tested homeopathic treatments tailored to your unique health needs
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="text-base transition-all duration-200 active:scale-[0.98]">
+              {/* Soft decorative light blobs inside the card */}
+              <div className="absolute -top-16 -left-16 w-36 h-36 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-16 -right-16 w-36 h-36 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
+
+              <motion.div
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  show: { opacity: 1, y: 0 }
+                }}
+                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur"
+              >
+                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                Trusted Homeopathic Care
+              </motion.div>
+
+              <motion.h1 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0 }
+                }}
+                className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" 
+                style={{ letterSpacing: '-0.02em' }}
+              >
+                Pandit Ganesh Narayan <br className="hidden sm:inline" />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-amber-300 font-extrabold">
+                  Homeopathic Clinic
+                </span>
+              </motion.h1>
+              
+              <motion.p 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0 }
+                }}
+                className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl"
+              >
+                Experience natural, gentle, and effective healing through classical homeopathy, tailored to your body's unique health ecosystem.
+              </motion.p>
+              
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0, y: 20 },
+                  show: { opacity: 1, y: 0 }
+                }}
+                className="flex flex-col sm:flex-row gap-4"
+              >
+                <Button asChild size="lg" className="bg-gradient-to-r from-primary to-emerald-600 hover:from-primary/90 hover:to-emerald-600/90 text-white font-medium border-0 transition-all duration-200 active:scale-[0.98] shadow-lg shadow-primary/20">
                   <Link to="/contact">
                     Book Consultation
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="secondary" className="text-base transition-all duration-200 active:scale-[0.98]">
+                <Button asChild size="lg" variant="outline" className="border-white/20 text-white bg-white/5 hover:bg-white/10 hover:text-white backdrop-blur transition-all duration-200 active:scale-[0.98]">
                   <Link to="/treatments">
                     View Treatments
                   </Link>
                 </Button>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -92,12 +144,22 @@ const HomePage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 transition-all duration-300 hover:shadow-lg"
+                  whileHover="hover"
+                  variants={{
+                    hover: { y: -8, scale: 1.02 }
+                  }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  className="bg-card rounded-2xl p-8 shadow-sm border border-border/50 cursor-pointer"
                 >
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <motion.div 
+                    variants={{
+                      hover: { rotate: 10, scale: 1.1 }
+                    }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                    className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6"
+                  >
                     <benefit.icon className="w-7 h-7 text-primary" />
-                  </div>
+                  </motion.div>
                   <h3 className="text-xl font-semibold text-card-foreground mb-3" style={{ letterSpacing: '-0.01em' }}>
                     {benefit.title}
                   </h3>
