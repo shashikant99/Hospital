@@ -12,8 +12,8 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Pandit Ganesh Narayan Homeopathic Clinic</title>
-        <meta name="description" content="Get in touch with Pandit Ganesh Narayan Homeopathic Clinic in Surajgarh. Book your consultation with Dr. Manish Sharma today." />
+        <title>Contact Us - Pandit Shree Ganesh Narayan Homeopathic Clinic</title>
+        <meta name="description" content="Get in touch with Pandit Shree Ganesh Narayan Homeopathic Clinic in Surajgarh. Book your consultation with Dr. Manish Sharma today." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">

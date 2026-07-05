@@ -68,8 +68,8 @@ const TreatmentsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Homeopathic Treatments - Pandit Ganesh Narayan Clinic</title>
-        <meta name="description" content="Specialized homeopathic treatments for hair fall, skin conditions, PCOS, thyroid, migraine, and sexual health. Expert care by Dr. Manish Sharma in Surajgarh." />
+        <title>Homeopathic Treatments - Pandit Shree Ganesh Narayan Clinic</title>
+        <meta name="description" content="Specialized homeopathic treatments for hair fall, skin conditions, PCOS, thyroid, migraine, and sexual health. Expert care by Dr. Manish Sharma at Pandit Shree Ganesh Narayan Clinic in Surajgarh." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">

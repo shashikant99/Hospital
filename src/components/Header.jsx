@@ -26,7 +26,7 @@ const Header = () => {
             <Logo className="w-10 h-10 flex-shrink-0" />
             <div className="hidden sm:block">
               <span className="text-lg font-semibold text-foreground leading-tight block" style={{ letterSpacing: '-0.01em' }}>
-                Pandit Ganesh Narayan
+                Pandit Shree Ganesh Narayan
               </span>
               <p className="text-xs text-muted-foreground">Homeopathic Clinic</p>
             </div>

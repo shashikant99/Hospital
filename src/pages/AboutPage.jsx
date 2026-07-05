@@ -35,8 +35,8 @@ const AboutPage = () => {
   return (
     <>
       <Helmet>
-        <title>About Us - Pandit Ganesh Narayan Homeopathic Clinic</title>
-        <meta name="description" content="Learn about Dr. Manish Sharma and Pandit Ganesh Narayan Homeopathic Clinic in Surajgarh. Over 12 years of experience in natural homeopathic healing." />
+        <title>About Us - Pandit Shree Ganesh Narayan Homeopathic Clinic</title>
+        <meta name="description" content="Learn about Dr. Manish Sharma and Pandit Shree Ganesh Narayan Homeopathic Clinic in Surajgarh. Over 12 years of experience in natural homeopathic healing." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">

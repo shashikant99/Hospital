@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clinic-pgn.vercel.app/sitemap.xml
