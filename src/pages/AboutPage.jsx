@@ -9,7 +9,7 @@ import clinicEntrance from '@/assets/clinic-entrance.jpg';
 const AboutPage = () => {
   const stats = [
     { number: '12+', label: 'Years Experience' },
-    { number: '3,200+', label: 'Patients Treated' },
+    { number: '7,2000+', label: 'Patients Treated' },
     { number: '11', label: 'Specializations' },
     { number: '94%', label: 'Success Rate' }
   ];
