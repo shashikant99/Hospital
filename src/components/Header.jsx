@@ -4,6 +4,8 @@ import { Menu, X, Leaf, Phone, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Logo from './Logo.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
+import { CLINIC_CONTACT, getWhatsAppUrl } from '@/lib/whatsapp.js';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +28,7 @@ const Header = () => {
             <Logo className="w-10 h-10 flex-shrink-0" />
             <div className="hidden sm:block">
               <span className="text-lg font-semibold text-foreground leading-tight block" style={{ letterSpacing: '-0.01em' }}>
-                Pandit Shree Ganesh Narayan
+                Pandit Ganesh Narayan
               </span>
               <p className="text-xs text-muted-foreground">Homeopathic Clinic</p>
             </div>
@@ -49,7 +51,16 @@ const Header = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2 lg:gap-3">
+            <a
+              href={getWhatsAppUrl("Hello Dr. Manish Sharma, I would like to inquire about homeopathic consultation.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 rounded-lg text-[#25D366] hover:bg-[#25D366]/10 transition-all duration-200"
+              title="Chat on WhatsApp"
+            >
+              <WhatsAppIcon className="w-4 h-4" />
+            </a>
             <a
               href="https://www.facebook.com/p/Pandit-ganesh-naryan-homeopathic-clinnic-surajgarh-100075950684653/"
               target="_blank"
@@ -69,11 +80,11 @@ const Header = () => {
               <Instagram className="w-4 h-4" />
             </a>
             <a
-              href="tel:+919024547154"
-              className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-primary hover:bg-primary/10 transition-all duration-200"
+              href={`tel:${CLINIC_CONTACT.phoneDisplay}`}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium text-primary hover:bg-primary/10 transition-all duration-200"
             >
               <Phone className="w-4 h-4" />
-              <span>9024547154</span>
+              <span>{CLINIC_CONTACT.phoneNumber}</span>
             </a>
             <Button asChild className="transition-all duration-200 active:scale-[0.98]">
               <Link to="/contact">Book Consultation</Link>
@@ -117,12 +128,22 @@ const Header = () => {
 
                 <div className="flex items-center gap-2">
                   <a
-                    href="tel:+919024547154"
+                    href={`tel:${CLINIC_CONTACT.phoneDisplay}`}
                     onClick={() => setIsOpen(false)}
-                    className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-lg text-sm font-medium text-primary bg-primary/10 transition-all duration-200"
+                    className="flex-1 flex items-center justify-center gap-2 px-3 py-3 rounded-lg text-sm font-medium text-primary bg-primary/10 transition-all duration-200"
                   >
                     <Phone className="w-4 h-4" />
-                    <span>Call: 9024547154</span>
+                    <span>Call Us</span>
+                  </a>
+                  <a
+                    href={getWhatsAppUrl("Hello Dr. Manish Sharma, I would like to inquire about homeopathic consultation.")}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center justify-center w-[46px] h-[46px] rounded-lg text-[#25D366] bg-[#25D366]/10 transition-all duration-200"
+                    title="WhatsApp"
+                  >
+                    <WhatsAppIcon className="w-5 h-5" />
                   </a>
                   <a
                     href="https://www.facebook.com/p/Pandit-ganesh-naryan-homeopathic-clinnic-surajgarh-100075950684653/"

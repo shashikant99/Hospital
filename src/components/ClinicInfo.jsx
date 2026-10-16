@@ -1,5 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
+import { CLINIC_CONTACT, getWhatsAppUrl } from '@/lib/whatsapp.js';
 
 const ClinicInfo = () => {
   return (
@@ -29,7 +31,29 @@ const ClinicInfo = () => {
             </div>
             <div>
               <p className="font-medium text-foreground mb-1">Phone</p>
-              <p className="text-muted-foreground">+91 9024547154</p>
+              <a 
+                href={`tel:${CLINIC_CONTACT.phoneDisplay}`}
+                className="text-muted-foreground hover:text-primary transition-colors"
+              >
+                {CLINIC_CONTACT.phoneDisplay}
+              </a>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center flex-shrink-0 text-[#25D366]">
+              <WhatsAppIcon className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="font-medium text-foreground mb-1">WhatsApp (Direct Consultation)</p>
+              <a 
+                href={getWhatsAppUrl("Hello Dr. Manish Sharma, I would like to consult with you regarding homeopathic treatment.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:underline font-medium inline-flex items-center gap-1"
+              >
+                Chat on WhatsApp (+91 9024547154)
+              </a>
             </div>
           </div>
 

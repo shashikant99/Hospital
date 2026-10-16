@@ -18,8 +18,8 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Pandit Shree Ganesh Narayan Homeopathic Clinic Surajgarh - Natural Healing</title>
-        <meta name="description" content="Expert homeopathic treatments in Surajgarh by Dr. Manish Sharma. Specializing in hair fall, skin conditions, PCOS, thyroid, and more. Book your consultation today at Pandit Shree Ganesh Narayan Homeopathic Clinic." />
+        <title>Pandit Ganesh Narayan Homeopathic Clinic Surajgarh - Natural Healing</title>
+        <meta name="description" content="Expert homeopathic treatments in Surajgarh by Dr. Manish Sharma. Specializing in hair fall, skin conditions, PCOS, thyroid, and more. Book your consultation today at Pandit Ganesh Narayan Homeopathic Clinic." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -80,7 +80,7 @@ const HomePage = () => {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" 
                 style={{ letterSpacing: '-0.02em' }}
               >
-                Pandit Shree Ganesh Narayan <br className="hidden sm:inline" />
+                Pandit Ganesh Narayan <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 via-emerald-400 to-amber-300 font-extrabold">
                   Homeopathic Clinic
                 </span>

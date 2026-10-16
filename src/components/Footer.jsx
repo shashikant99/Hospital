@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, MapPin, Phone, Mail, Facebook, Instagram } from 'lucide-react';
 import Logo from './Logo.jsx';
+import WhatsAppIcon from './WhatsAppIcon.jsx';
+import { CLINIC_CONTACT, getWhatsAppUrl } from '@/lib/whatsapp.js';
 
 const Footer = () => {
   return (
@@ -52,8 +54,19 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="tel:+919024547154" className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors duration-200">
-                  +91 9024547154
+                <a href={`tel:${CLINIC_CONTACT.phoneDisplay}`} className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors duration-200">
+                  {CLINIC_CONTACT.phoneDisplay}
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366] flex-shrink-0" />
+                <a 
+                  href={getWhatsAppUrl("Hello Dr. Manish Sharma, I would like to inquire about homeopathic treatment.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-secondary-foreground/80 hover:text-[#25D366] transition-colors duration-200 font-medium"
+                >
+                  WhatsApp: +91 9024547154
                 </a>
               </div>
               <div className="flex items-center gap-2">

@@ -1,19 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
+import { Phone, MessageCircle } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import ContactForm from '@/components/ContactForm.jsx';
 import ClinicInfo from '@/components/ClinicInfo.jsx';
+import WhatsAppIcon from '@/components/WhatsAppIcon.jsx';
+import { CLINIC_CONTACT, getWhatsAppUrl } from '@/lib/whatsapp.js';
 import clinicEntrance from '@/assets/clinic-entrance.jpg';
 
 const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Us - Pandit Shree Ganesh Narayan Homeopathic Clinic</title>
-        <meta name="description" content="Get in touch with Pandit Shree Ganesh Narayan Homeopathic Clinic in Surajgarh. Book your consultation with Dr. Manish Sharma today." />
+        <title>Book Appointment & Contact - Pandit Ganesh Narayan Homeopathic Clinic</title>
+        <meta name="description" content="Book your homeopathic consultation with Dr. Manish Sharma at Pandit Ganesh Narayan Homeopathic Clinic in Surajgarh. Instant confirmation on WhatsApp." />
       </Helmet>
 
       <div className="min-h-screen flex flex-col">
@@ -66,18 +68,30 @@ const ContactPage = () => {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2" style={{ letterSpacing: '-0.01em' }}>
-                        Call us directly
+                        Direct Contact & Urgent Inquiries
                       </h3>
-                      <p className="text-primary-foreground/90 mb-4 leading-relaxed">
-                        Speak with Dr. Manish Sharma or our clinic staff to discuss your health concerns and schedule an appointment.
+                      <p className="text-primary-foreground/90 mb-4 leading-relaxed text-sm">
+                        Speak directly with Dr. Manish Sharma for immediate homeopathic consultations or appointment follow-ups.
                       </p>
-                      <a
-                        href="tel:+919024547154"
-                        className="inline-flex items-center gap-2 text-xl font-bold hover:opacity-90 transition-opacity duration-200"
-                      >
-                        <Phone className="w-5 h-5" />
-                        +91 9024547154
-                      </a>
+                      <div className="flex flex-wrap items-center gap-3">
+                        <a
+                          href={`tel:${CLINIC_CONTACT.phoneDisplay}`}
+                          className="inline-flex items-center gap-2 text-lg font-bold hover:opacity-90 transition-opacity duration-200 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-xl"
+                        >
+                          <Phone className="w-4 h-4" />
+                          <span>{CLINIC_CONTACT.phoneDisplay}</span>
+                        </a>
+
+                        <a
+                          href={getWhatsAppUrl("Hello Dr. Manish Sharma, I would like to consult with you regarding homeopathic treatment.")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-semibold bg-[#25D366] hover:bg-[#20ba59] text-white px-4 py-2.5 rounded-xl shadow-md transition-all duration-200"
+                        >
+                          <WhatsAppIcon className="w-4 h-4" />
+                          <span>Chat on WhatsApp</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

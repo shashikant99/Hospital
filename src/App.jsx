@@ -7,6 +7,8 @@ import TreatmentsPage from './pages/TreatmentsPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 
+import WhatsAppFloatingButton from './components/WhatsAppFloatingButton.jsx';
+
 function App() {
   return (
     <Router>
@@ -26,6 +28,7 @@ function App() {
           </div>
         } />
       </Routes>
+      <WhatsAppFloatingButton />
       <Toaster />
     </Router>
   );
