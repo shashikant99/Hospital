@@ -5,6 +5,7 @@ import { Award, Users, Heart, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import clinicEntrance from '@/assets/clinic-entrance.jpg';
+import { CLINIC_CONTACT } from '@/lib/whatsapp.js';
 
 const AboutPage = () => {
   const stats = [
@@ -142,7 +143,7 @@ const AboutPage = () => {
                     Known for his patient-centered approach and attention to detail, Dr. Sharma takes the time to understand not just your symptoms, but your overall health picture, lifestyle, and emotional wellbeing to prescribe the most appropriate remedy.
                   </p>
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-2 mb-6">
                   {[
                     'BHMS (Bachelor of Homeopathic Medicine and Surgery)',
                     'Advanced Diploma in Classical Homeopathy',
@@ -154,6 +155,17 @@ const AboutPage = () => {
                       <p className="text-sm text-muted-foreground">{credential}</p>
                     </div>
                   ))}
+                </div>
+
+                {/* Doctor's Motto / Tagline Banner */}
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-primary/10 via-emerald-500/10 to-primary/10 border border-primary/20 shadow-sm flex items-center gap-3">
+                  <span className="text-2xl text-primary flex-shrink-0">💧</span>
+                  <div>
+                    <span className="text-[11px] font-semibold text-primary uppercase tracking-wider block">Doctor's Motto</span>
+                    <p className="text-base sm:text-lg font-bold text-foreground">
+                      "{CLINIC_CONTACT.tagline}"
+                    </p>
+                  </div>
                 </div>
               </motion.div>
 

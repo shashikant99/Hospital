@@ -22,6 +22,21 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* Top Tagline & Timings Banner */}
+      <div className="bg-gradient-to-r from-emerald-900 via-primary to-emerald-900 text-white py-1.5 px-4 text-xs shadow-sm">
+        <div className="container-custom flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+          <div className="flex items-center gap-1.5 font-medium">
+            <span className="text-amber-300">💧</span>
+            <span className="tracking-wide font-semibold text-amber-200">
+              "{CLINIC_CONTACT.tagline}"
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-[11px] text-white/90">
+            <span>⏰ Timings: 9:00 AM - 1:30 PM & 4:30 PM - 8:00 PM</span>
+          </div>
+        </div>
+      </div>
+
       <nav className="container-custom">
         <div className="flex h-16 items-center justify-between">
           <Link to="/" className="flex items-center gap-3 transition-opacity duration-200 hover:opacity-80">

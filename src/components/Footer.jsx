@@ -23,6 +23,10 @@ const Footer = () => {
             <p className="text-sm text-secondary-foreground/80 leading-relaxed max-w-[280px]">
               Providing natural and holistic homeopathic treatments for over a decade in Surajgarh.
             </p>
+            <div className="mt-4 p-3 rounded-xl bg-primary/10 border border-primary/20 text-xs font-semibold text-foreground max-w-[280px]">
+              <span className="text-primary mr-1">💧</span>
+              <span>"{CLINIC_CONTACT.tagline}"</span>
+            </div>
           </div>
 
           <div>
@@ -49,7 +53,7 @@ const Footer = () => {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <p className="text-sm text-secondary-foreground/80 leading-relaxed">
-                  Kirna Villas, P.No. 4, Ward No. 16, Surajgarh, Rajasthan
+                  In front of Ganesh Mandir, Ward No. 20, House No. 4, Surajgarh, Distt. Jhunjhunu (Raj.) 333029
                 </p>
               </div>
               <div className="flex items-center gap-2">
@@ -101,10 +105,11 @@ const Footer = () => {
           <div>
             <span className="text-sm font-semibold mb-4 block tracking-wide">Clinic Hours</span>
             <div className="space-y-2 text-sm text-secondary-foreground/80">
-              <p>Monday - Saturday</p>
-              <p className="font-medium">9:00 AM - 7:00 PM</p>
-              <p className="mt-3">Sunday</p>
-              <p className="font-medium">10:00 AM - 2:00 PM</p>
+              <p className="font-semibold text-foreground">Monday - Saturday</p>
+              <div className="space-y-1">
+                <p>Morning: <span className="font-medium text-foreground">9:00 AM - 1:30 PM</span></p>
+                <p>Evening: <span className="font-medium text-foreground">4:30 PM - 8:00 PM</span></p>
+              </div>
             </div>
           </div>
         </div>

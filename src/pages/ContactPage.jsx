@@ -145,13 +145,18 @@ const ContactPage = () => {
                   <h3 className="text-2xl font-bold text-foreground mb-3">
                     Visit Our Clinic
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    We are located at Kirna Villas in Surajgarh. You will find our signature circular orange and green PGN sign right outside the entrance on the brick facade.
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Located right in front of Ganesh Mandir in Surajgarh. You will find our signature circular orange and green PGN clinic sign outside the entrance.
                   </p>
                   <div className="space-y-2 text-sm text-muted-foreground">
                     <p className="font-semibold text-foreground">Address:</p>
-                    <p>Kirna Villas, P.No. 4, Ward No. 16,</p>
-                    <p>Surajgarh, Rajasthan - 333029</p>
+                    <p className="text-foreground">In front of Ganesh Mandir, Ward No. 20, House No. 4,</p>
+                    <p>Surajgarh, Distt. Jhunjhunu (Raj.) - 333029</p>
+                    <div className="pt-2">
+                      <p className="font-semibold text-foreground">Clinic Timings:</p>
+                      <p>Morning: 9:00 AM to 1:30 PM</p>
+                      <p>Evening: 4:30 PM to 8:00 PM</p>
+                    </div>
                   </div>
                 </div>
               </div>

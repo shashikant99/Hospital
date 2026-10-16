@@ -19,8 +19,8 @@ const ClinicInfo = () => {
               <p className="font-medium text-foreground mb-1">Location</p>
               <p className="text-muted-foreground leading-relaxed">
                 Pandit Ganesh Narayan Homeopathic Clinic<br />
-                Kirna Villas, P.No. 4, Ward No. 16,<br />
-                Surajgarh, Rajasthan
+                In front of Ganesh Mandir, Ward No. 20, House No. 4,<br />
+                Surajgarh, Distt. Jhunjhunu (Raj.) 333029
               </p>
             </div>
           </div>
@@ -73,10 +73,11 @@ const ClinicInfo = () => {
             </div>
             <div>
               <p className="font-medium text-foreground mb-1">Clinic Hours</p>
-              <p className="text-muted-foreground leading-relaxed">
-                Monday - Saturday: 9:00 AM - 7:00 PM<br />
-                Sunday: 10:00 AM - 2:00 PM
-              </p>
+              <div className="text-muted-foreground leading-relaxed text-sm space-y-0.5">
+                <p className="font-semibold text-foreground">Monday - Saturday:</p>
+                <p>Morning: <span className="font-medium text-foreground">9:00 AM to 1:30 PM</span></p>
+                <p>Evening: <span className="font-medium text-foreground">4:30 PM to 8:00 PM</span></p>
+              </div>
             </div>
           </div>
 
@@ -116,9 +117,17 @@ const ClinicInfo = () => {
         </div>
       </div>
 
-      <div className="pt-6 border-t border-border">
+      {/* Clinic Tagline Box */}
+      <div className="p-4 rounded-xl bg-gradient-to-r from-primary/10 via-emerald-500/10 to-primary/10 border border-primary/20 text-center shadow-sm">
+        <span className="text-base text-primary mr-1.5">💧</span>
+        <span className="font-semibold text-foreground text-sm tracking-wide">
+          "{CLINIC_CONTACT.tagline}"
+        </span>
+      </div>
+
+      <div className="pt-4 border-t border-border">
         <p className="text-sm text-muted-foreground leading-relaxed">
-          Dr. Manish Sharma is available for consultations during clinic hours. 
+          Dr. Manish Sharma is available for consultations during clinic hours (9:00 AM - 1:30 PM & 4:30 PM - 8:00 PM). 
           Walk-ins are welcome, but appointments are recommended to avoid waiting time.
         </p>
       </div>

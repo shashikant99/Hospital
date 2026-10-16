@@ -3,10 +3,11 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CheckCircle2, Leaf, Heart, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Leaf, Heart, Shield, Clock, MapPin } from 'lucide-react';
 import Header from '@/components/Header.jsx';
 import Footer from '@/components/Footer.jsx';
 import homeWebp from '@/assets/home.webp';
+import { CLINIC_CONTACT } from '@/lib/whatsapp.js';
 
 const HomePage = () => {
   const benefits = [
@@ -61,15 +62,16 @@ const HomePage = () => {
               <div className="absolute -top-16 -left-16 w-36 h-36 bg-primary/20 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute -bottom-16 -right-16 w-36 h-36 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
 
+              {/* Tagline Badge */}
               <motion.div
                 variants={{
                   hidden: { opacity: 0, y: 10 },
                   show: { opacity: 1, y: 0 }
                 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-white text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/25 border border-emerald-400/40 text-amber-200 text-xs sm:text-sm font-semibold tracking-wide mb-6 backdrop-blur shadow-md"
               >
-                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Trusted Homeopathic Care
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                <span>💧 "{CLINIC_CONTACT.tagline}"</span>
               </motion.div>
 
               <motion.h1 
@@ -116,6 +118,53 @@ const HomePage = () => {
                 </Button>
               </motion.div>
             </motion.div>
+          </div>
+        </section>
+
+        {/* Quick Highlights Strip: Tagline, Timings, Address */}
+        <section className="bg-gradient-to-r from-emerald-950 via-primary to-emerald-950 text-white py-6 px-4 shadow-xl border-y border-emerald-700/30">
+          <div className="container-custom">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+              {/* Tagline */}
+              <div className="flex items-center gap-3.5 bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur">
+                <div className="w-12 h-12 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl flex-shrink-0">
+                  💧
+                </div>
+                <div>
+                  <span className="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider block">Clinic Tagline</span>
+                  <p className="text-sm font-bold text-amber-200 leading-snug">
+                    "{CLINIC_CONTACT.tagline}"
+                  </p>
+                </div>
+              </div>
+
+              {/* Timings */}
+              <div className="flex items-center gap-3.5 bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur">
+                <div className="w-12 h-12 rounded-xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-emerald-300" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider block">Consultation Hours</span>
+                  <p className="text-xs sm:text-sm font-semibold text-white">
+                    Morning: 9:00 AM - 1:30 PM<br />
+                    Evening: 4:30 PM - 8:00 PM
+                  </p>
+                </div>
+              </div>
+
+              {/* Address */}
+              <div className="flex items-center gap-3.5 bg-white/5 border border-white/10 p-4 rounded-2xl backdrop-blur">
+                <div className="w-12 h-12 rounded-xl bg-emerald-400/20 text-emerald-300 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-emerald-300" />
+                </div>
+                <div>
+                  <span className="text-[11px] font-semibold text-emerald-300 uppercase tracking-wider block">Clinic Address</span>
+                  <p className="text-xs sm:text-sm font-semibold text-white leading-snug">
+                    In front of Ganesh Mandir, Ward No. 20, House No. 4, Surajgarh
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

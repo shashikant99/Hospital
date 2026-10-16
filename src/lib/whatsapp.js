@@ -8,7 +8,9 @@ export const CLINIC_CONTACT = {
   phoneNumber: '9024547154',
   whatsappNumber: '919024547154', // Owner WhatsApp: +91 9024547154
   email: 'clinic@ganeshnarayan.com',
-  address: 'Kirna Villas, P.No. 4, Ward No. 16, Surajgarh, Rajasthan - 333029'
+  address: 'In front of Ganesh Mandir, Ward No. 20, House No. 4, Surajgarh, Distt. Jhunjhunu (Raj.) 333029',
+  timings: '9:00 AM to 1:30 PM and 4:30 PM to 8:00 PM',
+  tagline: 'एक बूंद होम्योपैथिक दवा आपकी जिन्दगी बदल सकती है'
 };
 
 /**
